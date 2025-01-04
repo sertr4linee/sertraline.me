@@ -70,9 +70,9 @@ const FloatingDockMobile = ({
                 <Link
                   href={item.href}
                   key={item.title}
-                  className="h-10 w-10 rounded-full bg-gradient-to-r from-emerald-400 to-cyan-400 flex items-center justify-center"
+                  className="h-10 w-10 rounded-full bg-gradient-to-r from-gray-200 to-white flex items-center justify-center"
                 >
-                  <div className="h-4 w-4 text-white">{item.icon}</div>
+                  <div className="h-4 w-4 text-gray-700">{item.icon}</div>
                 </Link>
               </motion.div>
             ))}
@@ -81,9 +81,9 @@ const FloatingDockMobile = ({
       </AnimatePresence>
       <button
         onClick={() => setOpen(!open)}
-        className="h-10 w-10 rounded-full bg-gradient-to-r from-emerald-400 to-cyan-400 flex items-center justify-center"
+        className="h-10 w-10 rounded-full bg-gradient-to-r from-gray-200 to-white flex items-center justify-center"
       >
-        <IconLayoutNavbarCollapse className="h-5 w-5 text-white" />
+        <IconLayoutNavbarCollapse className="h-5 w-5 text-gray-700" />
       </button>
     </div>
   );
@@ -102,7 +102,7 @@ const FloatingDockDesktop = ({
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
       className={cn(
-        "mx-auto hidden md:flex h-16 gap-4 items-end rounded-2xl bg-gradient-to-r from-emerald-400 to-cyan-400 px-4 pb-3",
+        "mx-auto hidden md:flex h-16 gap-4 items-end rounded-2xl bg-gradient-to-r from-gray-200 to-white px-4 pb-3",
         className
       )}
     >
@@ -174,7 +174,7 @@ function IconContainer({
         style={{ width, height }}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
-        className="aspect-square rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center relative"
+        className="aspect-square rounded-full bg-gray-100/50 backdrop-blur-sm flex items-center justify-center relative"
       >
         <AnimatePresence>
           {hovered && (
@@ -182,7 +182,7 @@ function IconContainer({
               initial={{ opacity: 0, y: 10, x: "-50%" }}
               animate={{ opacity: 1, y: 0, x: "-50%" }}
               exit={{ opacity: 0, y: 2, x: "-50%" }}
-              className="px-2 py-0.5 whitespace-pre rounded-md bg-white/90 backdrop-blur-sm text-emerald-800 absolute left-1/2 -translate-x-1/2 -top-8 w-fit text-xs"
+              className="px-2 py-0.5 whitespace-pre rounded-md bg-white/90 backdrop-blur-sm text-gray-800 absolute left-1/2 -translate-x-1/2 -top-8 w-fit text-xs"
             >
               {title}
             </motion.div>
@@ -190,7 +190,7 @@ function IconContainer({
         </AnimatePresence>
         <motion.div
           style={{ width: widthIcon, height: heightIcon }}
-          className="flex items-center justify-center text-white"
+          className="flex items-center justify-center text-gray-700"
         >
           {icon}
         </motion.div>
